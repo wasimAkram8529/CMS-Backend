@@ -9,7 +9,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://cms-frontend-ecru.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://cms-frontend-ecru.vercel.app",
+      "https://cms-frontend-woad-eight.vercel.app",
+    ],
     credentials: true,
   })
 );
