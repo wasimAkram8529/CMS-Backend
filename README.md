@@ -1,5 +1,3 @@
-cat << 'EOF' > README.md
-
 # 📘 Complaint Management System – Backend
 
 This is the **Node.js + Express** backend for the Complaint Management System.  
