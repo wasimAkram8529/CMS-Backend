@@ -74,9 +74,3 @@ CMS-Backend/
 ├── .env
 └── README.md
 ```
-
-## Developer
-
-**Md Wasim Akram**  
-📧 wasim.cms@gmail.com  
-🏫 NIT Kurukshetra
