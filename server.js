@@ -6,13 +6,17 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     credentials: true,
-//   })
-// );
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://your-frontend-url.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
