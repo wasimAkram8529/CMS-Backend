@@ -59,6 +59,16 @@ exports.getComplaints = async (req, res) => {
   res.json(complaints);
 };
 
+exports.getComplaintById = async (req, res) => {
+  try {
+    const complaint = await Complaint.findById(req.params.id);
+    if (!complaint) return res.status(404).json({ error: "Not found" });
+    res.json(complaint);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch complaint" });
+  }
+};
+
 exports.updateComplaint = async (req, res) => {
   const { id } = req.params;
   const { status } = req.body;

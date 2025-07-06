@@ -9,6 +9,7 @@ const {
 
 router.post("/complaints", createComplaint);
 router.get("/complaints", getComplaints);
+router.get("/:id", complaintController.getComplaintById);
 router.put("/complaints/:id", updateComplaint);
 router.delete("/complaints/:id", deleteComplaint);
 
