@@ -6,14 +6,10 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://your-frontend-url.vercel.app",
-];
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: ["http://localhost:3000", "https://cms-frontend-ecru.vercel.app"],
     credentials: true,
   })
 );
